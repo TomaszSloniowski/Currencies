@@ -1,0 +1,15 @@
+.currency-usd {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    background-color: green;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: yellow;
+    width: 190px;
+    text-align: start;
+}
+.btc {
+    color: black;
+    padding-right: 10px;
+}

@@ -1,0 +1,14 @@
+<form class="col-md-3">
+    <form (ngSubmit)="onSubmit()" #LoginForm="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label for="email">e-mail</label>
+    <input type="text" class="form-control" id="email" required
+    [(ngModel)]="model.email" name="email" #password="ngModel">
+  </div>
+  <div class="form-group">
+    <label for="password">password</label>
+    <input type="text" class="form-control" id="password" required
+    [(ngModel)]="model.password" name="password" #password="ngModel">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+</form>
