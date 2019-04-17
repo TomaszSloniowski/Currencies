@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrenciesService } from '../currencies/currencies.service';
-import { Observable } from 'rxjs';
-import { Ticker } from '../currencies/ticker';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,15 +7,16 @@ import { Ticker } from '../currencies/ticker';
   templateUrl: './currency-usd.component.html',
   styleUrls: ['./currency-usd.component.css']
 })
-export class CurrencyUsdComponent {
+export class CurrencyUsdComponent implements OnInit {
 
-private ticker : Ticker[] = [];
+  public Usd = 3;
+  public tickerBtcUsd: any;
 
-  constructor(private service: CurrenciesService) {
+  constructor(
+    private route: ActivatedRoute) {}
 
-      this.service.getCurrencyUsd().subscribe((res : any[])=>{
-        this.ticker = res;
-        console.log (this.ticker);
-      });
-     }
+    ngOnInit(): void {
+      this.tickerBtcUsd = this.route.snapshot.data.btcusd;
+      console.log('BTC/USD: ', this.tickerBtcUsd)
+  }
 }

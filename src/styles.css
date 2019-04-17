@@ -1,7 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 60px;
+.body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
 }
+
+.html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.features-container {
+  padding-top: 100px;
+  margin: 0px;
+  }
+
+.login-container {
+  padding-top: 100px;
+  margin: 0px;
+}
+
+.currencies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+  margin: 0px;
+  }
+

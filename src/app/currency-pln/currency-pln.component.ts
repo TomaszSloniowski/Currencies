@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrenciesService } from '../currencies/currencies.service'
-import { Observable } from 'rxjs';
-import { Ticker } from '../currencies/ticker';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-currency-pln',
@@ -9,19 +7,17 @@ import { Ticker } from '../currencies/ticker';
   styleUrls: ['./currency-pln.component.css']
 })
 
-export class CurrencyPlnComponent {
+export class CurrencyPlnComponent implements OnInit {
 
-  private ticker : Ticker[] = [];
- // private BtcPlnObservable : Observable<any> ;
+  public tickerBtcPln: any;
+  public tickerLskPln: any;
+  public tickerEthPln: any;
 
-  constructor(private service: CurrenciesService) {
+  constructor(private route: ActivatedRoute) {}
 
-  //  this.BtcPlnObservable = this.service.getCurrencyPln();
-
-    this.service.getCurrencyPln().subscribe((res : any[])=>{
-      this.ticker = res;
-      console.log (this.ticker);
-    });
-   }
-
-}
+  ngOnInit(): void {
+    this.tickerBtcPln = this.route.snapshot.data.btc;
+    this.tickerLskPln = this.route.snapshot.data.lsk;
+    this.tickerEthPln = this.route.snapshot.data.eth;
+    }
+  }

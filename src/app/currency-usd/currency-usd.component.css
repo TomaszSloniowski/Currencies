@@ -1,6 +1,4 @@
 .currency-usd {
-    display: flex;
-    justify-content: flex-start;
     padding: 8px;
     background-color: green;
     font-size: 1.2rem;

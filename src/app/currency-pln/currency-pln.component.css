@@ -1,6 +1,5 @@
-.currency-pln {
-    display: flex;
-    justify-content: flex-start;
+
+.currency-btc-value {
     padding: 8px;
     background-color: red;
     font-size: 1.2rem;
@@ -9,7 +8,17 @@
     width: 190px;
     text-align: start;
 }
-.btc {
+
+.currency-lsk-eth-value {
+    padding: 8px;
+    background-color: red;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:black;
+    width: 190px;
+    text-align: start;
+}
+.currency {
     color: black;
     padding-right: 10px;
 }
