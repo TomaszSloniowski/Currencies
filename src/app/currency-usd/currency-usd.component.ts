@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./currency-usd.component.css']
 })
 export class CurrencyUsdComponent implements OnInit {
-
   public Usd = 3;
   public tickerBtcUsd: any;
 
