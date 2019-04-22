@@ -20,7 +20,8 @@ import { EthResolver } from './currencies/EthResolver';
 import { BtcUsdResolver } from './currencies/BtcUsdResolver';
 
 import { AngularWebStorageModule } from 'angular-web-storage';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { interceptor } from './currencies/interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,12 @@ import { HttpClientModule } from '@angular/common/http';
     BtcResolver,
     LskResolver,
     EthResolver,
-    BtcUsdResolver
+    BtcUsdResolver,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: interceptor,
+      multi: true
+  },
   ],
   bootstrap: [AppComponent]
 })

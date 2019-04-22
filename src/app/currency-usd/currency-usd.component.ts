@@ -8,14 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./currency-usd.component.css']
 })
 export class CurrencyUsdComponent implements OnInit {
-  public Usd = 3;
+  public usd = 3;
   public tickerBtcUsd: any;
 
   constructor(
     private route: ActivatedRoute) {}
 
     ngOnInit(): void {
-      this.tickerBtcUsd = this.route.snapshot.data.btcusd;
-      console.log('BTC/USD: ', this.tickerBtcUsd)
+      this.tickerBtcUsd = this.route.snapshot.data.btc;
+      console.log('BTC/USD (usd=3PLN): ', (this.tickerBtcUsd.average/this.usd).toFixed(1))
   }
 }
