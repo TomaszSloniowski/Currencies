@@ -18,6 +18,8 @@ import { BtcResolver } from './currencies/BtcResolver';
 import { LskResolver } from './currencies/LskResolver';
 import { EthResolver } from './currencies/EthResolver';
 import { BtcUsdResolver } from './currencies/BtcUsdResolver';
+import { LskUsdResolver } from './currencies/LskUsdResolver';
+import { EthUsdResolver } from './currencies/EthUsdResolver';
 
 import { AngularWebStorageModule } from 'angular-web-storage';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -48,6 +50,8 @@ import { interceptor } from './currencies/interceptor';
     LskResolver,
     EthResolver,
     BtcUsdResolver,
+    LskUsdResolver,
+    EthUsdResolver,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: interceptor,

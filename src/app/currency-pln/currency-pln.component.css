@@ -1,5 +1,5 @@
 
-.currency-btc-value {
+:host.currency-btc-value {
     padding: 8px;
     background-color: red;
     font-size: 1.2rem;
@@ -9,7 +9,7 @@
     text-align: start;
 }
 
-.currency-lsk-eth-value {
+:host.currency-lsk-eth-value {
     padding: 8px;
     background-color: red;
     font-size: 1.2rem;

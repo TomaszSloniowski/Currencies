@@ -21,7 +21,14 @@ export class CurrenciesService {
   }
 
   getCurrencyBtcUsd() {
-    return this.http.get('https://bitbay.net/API/Public/BTC/ticker.json');
+    return this.http.get('https://bitbay.net/API/Public/BTCUSD/ticker.json');
   }
 
+  getCurrencyLskUsd() {
+    return this.http.get('https://bitbay.net/API/Public/LSKUSD/ticker.json');
+  }
+
+  getCurrencyEthUsd() {
+    return this.http.get('https://bitbay.net/API/Public/ETHUSD/ticker.json');
+  }
 }

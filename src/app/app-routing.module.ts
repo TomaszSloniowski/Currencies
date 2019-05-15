@@ -9,6 +9,9 @@ import { BtcResolver } from './currencies/BtcResolver';
 import { LskResolver } from './currencies/LskResolver';
 import { EthResolver } from './currencies/EthResolver';
 import { BtcUsdResolver } from './currencies/BtcUsdResolver';
+import { LskUsdResolver } from './currencies/LskUsdResolver';
+import { EthUsdResolver } from './currencies/EthUsdResolver';
+
 
 const routes: Routes = [
   { path: 'features', canActivate: [ AuthGuardService ], component: FeaturesComponent },
@@ -18,7 +21,9 @@ const routes: Routes = [
     btc: BtcResolver,
     lsk: LskResolver,
     eth: EthResolver,
-    btcusd: BtcUsdResolver
+    btcusd: BtcUsdResolver,
+    lskusd: LskUsdResolver,
+    ethusd: EthUsdResolver
   }},
   { path: '404', component: Page404Component, data: {message: 'User not found!'} },
   { path: '**', redirectTo: '404' }

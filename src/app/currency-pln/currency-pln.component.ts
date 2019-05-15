@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-currency-pln',
@@ -7,17 +6,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./currency-pln.component.css']
 })
 
-export class CurrencyPlnComponent implements OnInit {
+export class CurrencyPlnComponent  {
 
-  public tickerBtcPln: any;
-  public tickerLskPln: any;
-  public tickerEthPln: any;
+  @Input() ticker: any;
+  @Input() currency: string;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.tickerBtcPln = this.route.snapshot.data.btc;
-    this.tickerLskPln = this.route.snapshot.data.lsk;
-    this.tickerEthPln = this.route.snapshot.data.eth;
-    }
   }

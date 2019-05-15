@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-currency-usd',
@@ -8,14 +6,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./currency-usd.component.css']
 })
 export class CurrencyUsdComponent implements OnInit {
+
+  @Input() ticker: any;
+  @Input() currency: string;
+
   public usd = 3;
-  public tickerBtcUsd: any;
 
-  constructor(
-    private route: ActivatedRoute) {}
+  constructor() { }
 
-    ngOnInit(): void {
-      this.tickerBtcUsd = this.route.snapshot.data.btc;
-      console.log('BTC/USD (usd=3PLN): ', (this.tickerBtcUsd.average/this.usd).toFixed(1))
+  ngOnInit(): void {
+    this.ticker = (this.ticker / this.usd).toFixed(1)
   }
 }
